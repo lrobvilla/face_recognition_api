@@ -9,7 +9,11 @@ const image = require('./controllers/image');
 const app = express();
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use(cors());
+var corsOptions = {
+    origin: 'https://face-recognition-app-ynft.onrender.com/',
+    optionsSuccessStatus: 200,
+  }
+app.use(cors(corsOptions));
 
 const db = knex({
     client: 'pg',
