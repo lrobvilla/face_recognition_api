@@ -10,7 +10,7 @@ const app = express();
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 var corsOptions = {
-    origin: 'https://face-recognition-app-ynft.onrender.com/',
+    origin: '*',
     optionsSuccessStatus: 200,
   }
 app.use(cors(corsOptions));
